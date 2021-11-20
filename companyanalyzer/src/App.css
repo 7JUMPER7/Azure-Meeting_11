@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+  width: 40%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+  padding: 40px;
+  min-width: 300px;
+  overflow: hidden;
+  transition: .5s cubic-bezier(.5, 0, 0, 1);
+}
+
+.App form {
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+}
+.App form label {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 5px;
+}
+.App form label input {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 7px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2) inset;
+  height: 20px;
+  justify-content: center;
+  align-self: center;
+}
+.App form input[type="submit"] {
+  background-color: transparent;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  transition: .3s cubic-bezier(.5, 0, 0, 1);
+  font-weight: bold;
+  margin-top: 10px;
+}
+.App form input[type="submit"]:hover {
+  background-color: #145a8c;
+  color: white;
+}
+
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.App .rs {
+  margin-top: 20px;
+}
+.App .rs .loader {
+  width: 24px;
+  height: 24px;
+  background-color: #145a8c;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
+}
+
+.resultContainer-enter {
+  opacity: 0;
+  transform: translateY(200px);
+}
+.resultContainer-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.resultContainer-exit {
+  opacity: 1;
+}
+.resultContainer-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 500ms, transform 500ms;
+}
